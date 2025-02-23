@@ -8,8 +8,26 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    hello chat
+  <img id="weather-overlay">
+  <div id="loading">Loading...</div>
+  <div id="main-div">
+    <p id="city-p"></p>
+    <p id="weather-p"></p>
+    <img id="weather-icon">
+    <p id="temp-p"></p>
+    <p id="feelslike-p"></p>
+    <p id="windspeed-p"></p>
+    <p id="precipprob-p"></p>
+  </div>
+  <div id="secondary-div">
+    <input type="text" id="city-search" autocomplete="off" placeholder="City Name">
+    <p id="toggle-p">Eagle Units</p>
+    <button id="toggle-button"></button>
+  </div>
   </body>
 </html>

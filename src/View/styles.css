@@ -1,3 +1,144 @@
 body {
-  color: purple;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  display: flex;
+  margin: 3rem;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
 }
+
+#weather-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(1px)
+}
+
+#loading {
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+
+#main-div {
+  background: black;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;;
+  align-items: center;
+  min-width: 450px;
+  max-width: 650px;
+  min-height: 500px;
+  max-height: 650rem;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+
+p {
+  margin: 0.8rem;
+}
+
+#city-p {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+#weather-p {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+#weather-icon {
+  width: 7rem;
+  margin: 0 0 1rem 0;
+}
+
+#secondary-div {
+  background-color: black;
+  color: white;
+  min-width: 450px;
+  max-width: 650px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+
+#city-search {
+  background-color: inherit;
+  color: inherit;
+  width: 250px;
+  height: 2rem;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+#toggle-p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+#toggle-button {
+  width: 70px;  /* Increase width */
+  height: 36px;  /* Increase height */
+  border-radius: 36px;  /* Match height for a rounder look */
+  background-color: #868686;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#toggle-button::before {
+  content: "";
+  position: absolute;
+  width: 28px;  /* Increase width */
+  height: 28px;  /* Increase height */
+  top: 4px;  /* Adjust positioning */
+  left: 4px;  /* Adjust positioning */
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#toggle-button.active {
+  background-color: #03c40c;
+}
+
+#toggle-button.active::before {
+  transform: translateX(34px);  /* Move further to match new size */
+}
+
