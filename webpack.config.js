@@ -8,15 +8,14 @@ export default {
     filename: "main.js",
     path: path.resolve("dist"),
     clean: true,
-    publicPath: "./",
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/View/template.html"],
+    watchFiles: ["./src/index.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/View/template.html",
+      template: "./src/index.html",
     }),
   ],
   module: {
